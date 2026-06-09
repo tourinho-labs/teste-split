@@ -14,4 +14,5 @@ jobs:
       packages: write
       id-token: write
     uses: TourinhoM/org-ci-platform/.github/workflows/ci-tag.yml@main
-    secrets: inherit
+    secrets:
+      RELEASE_APP_PRIVATE_KEY: ${{ secrets.RELEASE_APP_PRIVATE_KEY }}
