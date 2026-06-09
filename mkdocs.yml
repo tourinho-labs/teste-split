@@ -1,0 +1,6 @@
+site_name: teste-split
+site_description: teste
+nav:
+  - Home: index.md
+plugins:
+  - techdocs-core

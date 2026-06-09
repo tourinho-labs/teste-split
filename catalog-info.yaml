@@ -1,0 +1,36 @@
+# Gerado pelo scaffolder. Quase tudo é derivado — edite só o que precisar.
+# https://backstage.io/docs/features/software-catalog/descriptor-format#kind-component
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: teste-split
+  description: teste
+  annotations:
+    github.com/project-slug: tourinho-labs/teste-split
+    backstage.io/techdocs-ref: dir:.
+    backstage.io/kubernetes-id: teste-split
+    argocd/app-name: teste-split
+    kyverno.io/namespace: teste-split
+    kyverno.io/kind: Deployment,Pod
+    kyverno.io/resource-name: teste-split
+  tags:
+    - nodejs
+    - fastify
+    - kubernetes
+  links:
+    - url: https://github.com/tourinho-labs/teste-split
+      title: Repositório
+      icon: github
+spec:
+  type: service
+  lifecycle: experimental
+  owner: user:default/tourinhom
+  system: system:default/platform-lab
+  dependsOn:
+    - resource:default/policy-reporter
+  # Relações surgem com o tempo — descomente e aponte quando existirem.
+  # O auto-discovery reingere este arquivo sozinho a cada 30min.
+  # dependsOn:
+  #   - resource:postgresql
+  # providesApis:
+  #   - minha-api
